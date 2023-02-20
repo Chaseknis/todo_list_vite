@@ -1,9 +1,9 @@
-import { useState, useRef } from "react";
-import { useOnClickOutside } from "./useOnClickOutside";
+import { useState, useRef } from 'react';
+
 const Modal = () => {
   const [openModal, setOpenModal] = useState(false);
   const ref = useRef();
-  
+
   useOnClickOutside(ref, openModal, () => setOpenModal(false));
   return (
     <div className="modal">
@@ -18,4 +18,3 @@ const Modal = () => {
   );
 };
 export default Modal;
-
